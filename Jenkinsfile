@@ -2,6 +2,7 @@ node {
 
 	stage('SCM Checkout')
 	{
+
 		git 'https://github.com/dhananjayksingh/testproject'
 		
 	}
@@ -9,7 +10,9 @@ node {
 	
 	stage('Compile-Package')
 	{
-		gsh 'mvn package'
+		def mvnHome=tool name: 'maven3', type: 'maven'
+		sh "${mvnHome}/bin/mvn package"
+		
 		
 	}
 
