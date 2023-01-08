@@ -23,7 +23,7 @@ node {
 		
 	}
 	
-	test('Slack Notification')
+	stage('Slack Notification')
 	{
 		slackSend baseUrl: 'https://hooks.slack.com/services/', 
 		channel: '#devopstraining', 
