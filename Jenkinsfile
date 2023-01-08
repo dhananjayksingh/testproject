@@ -15,5 +15,12 @@ node {
 		
 		
 	}
+	
+	stage('Email Notification')
+	{
+	
+		mail bcc: '', body: 'job completed', cc: '', from: '', replyTo: '', subject: 'Jenkins Task', to: 'kdhananjay95@gmail.com'
+		
+	}
 
 }
