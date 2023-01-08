@@ -22,5 +22,15 @@ node {
 		mail bcc: '', body: 'job completed', cc: '', from: '', replyTo: '', subject: 'Jenkins Task', to: 'kdhananjay95@gmail.com'
 		
 	}
+	
+	test('Slack Notification')
+	{
+		slackSend baseUrl: 'https://hooks.slack.com/services/', 
+		channel: '#devopstraining', 
+		color: 'good', 
+		message: 'welcome to slack_jenkins', 
+		tokenCredentialId: 'slack_demo'
+	}
+
 
 }
